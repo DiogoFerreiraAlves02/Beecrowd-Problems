@@ -1,2 +1,2 @@
-# BeecrowdProblems
-Beecrowd logic exercises
+# Beecrowd Problems
+Logic solved problems
