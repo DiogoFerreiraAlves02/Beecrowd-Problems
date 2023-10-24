@@ -1,1 +1,2 @@
 # BeecrowdProblems
+Beecrowd logic exercises
