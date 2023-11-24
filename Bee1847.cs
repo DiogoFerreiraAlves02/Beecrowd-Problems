@@ -9,15 +9,18 @@ namespace Beecrowd {
             string[] answers = Console.ReadLine().Split(' ');
             int a = int.Parse(answers[0]);
             int b = int.Parse(answers[1]);
-            int q = 0;
-            for(int r = 0; r < Math.Abs(b); r++){
-                if((a-r)%b == 0){
-                    q = (int)((a-r)/b);
-                    Console.WriteLine($"{q} {r}");
-                    break;
-                } 
-            }
-            
+            int c = int.Parse(answers[2]);
+            string face = ":(";
+
+            if(a > b && (b == c || b < c)) face = ":)";
+            else if(a < b && (b == c || b > c)) face = ":(";
+            else if(a < b && b < c && (b-a > c-b)) face = ":(";
+            else if(a < b && b < c && (b-a <= c-b)) face=":)";
+            else if(a > b && b > c && (a-b > b-c)) face = ":)";
+            else if(a > b && b > c && (a-b <= b-c)) face = ":(";
+            else if(a == b && b < c) face = ":)";
+            else if(a == b && b > c) face = ":(";
+            Console.WriteLine(face);
         }
     }   
 } 
